@@ -8,8 +8,8 @@ logger.setLevel(level=logging.WARNING)
 
 def generate_pet():
 
-    random_id = random.randint(900000, 999999)
-    random_int = random.randint(100, 200)
+    random_id = random.randint(9000000, 9999999)
+    random_int = random.randint(1000, 2000)
     random_string = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
 
     random_pet = {

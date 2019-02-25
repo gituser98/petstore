@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6289f6c05341d9962d86c9ec9f663d15b9c22114ae40cd40fd55012063cd684a"
+            "sha256": "3bbf0d0a04bb8662145b5fd0d9cacdaee3f40484f90a1b8c8e4ea5abfc0475a6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -51,13 +51,6 @@
             ],
             "markers": "sys_platform == 'win32'",
             "version": "==0.4.1"
-        },
-        "curlify": {
-            "hashes": [
-                "sha256:b383fa64ff632358b660bb72db03ad905fc91973bd6936373eaa81d8730f7645"
-            ],
-            "index": "pypi",
-            "version": "==2.1.1"
         },
         "idna": {
             "hashes": [

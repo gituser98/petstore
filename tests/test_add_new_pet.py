@@ -34,8 +34,8 @@ def test_add_new_valid_pet_id_0():
 
     assert response.status_code == constants.HTTP_OK, "HTTP Status is not correct!"
     assert isinstance(response.json()['id'], int)
-    assert test_utils.compare_dicts_ignore_keys(response.json(), generated_pet, {'id'}), "Response body doesn't match " \
-                                                                                         "the expected object! "
+    assert test_utils.compare_dicts_ignore_keys(response.json(), generated_pet, {'id'}), \
+        "Response body doesn't match the expected object! "
 
 
 @pytest.mark.postpet

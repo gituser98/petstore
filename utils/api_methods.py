@@ -1,7 +1,6 @@
 from config import properties
 from requests.compat import urljoin
 import requests
-import curlify
 
 
 def post_pet(payload):

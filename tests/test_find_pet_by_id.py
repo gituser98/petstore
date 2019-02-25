@@ -31,4 +31,4 @@ def test_get_by_nonexistent_id():
 def test_get_by_invalid_id():
     logger.info('Find a pet with invalid id: {0}'.format(constants.INVALID_ID))
     assert api_methods.get_pet_by_id(constants.INVALID_ID).status_code == constants.HTTP_NOT_FOUND
-    # Based on Swagger documentation, this should be 400
+    # Based on Swagger documentation, this should be 400, not 404
