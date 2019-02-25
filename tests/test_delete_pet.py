@@ -14,8 +14,8 @@ def test_delete_by_id():
     pet_id = api_methods.post_pet(test_utils.generate_pet()).json()['id']
     logger.info('Posted pet with id: {0} for deletion'.format(pet_id))
     response = api_methods.get_pet_by_id(pet_id)
-    assert response.status_code == constants.HTTP_OK
 
+    assert response.status_code == constants.HTTP_OK
     logger.info('Deleting the pet with id: {0}'.format(pet_id))
     assert api_methods.delete_pet_by_id(pet_id).status_code == constants.HTTP_OK
     assert api_methods.get_pet_by_id(pet_id).status_code == constants.HTTP_NOT_FOUND

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3bbf0d0a04bb8662145b5fd0d9cacdaee3f40484f90a1b8c8e4ea5abfc0475a6"
+            "sha256": "6289f6c05341d9962d86c9ec9f663d15b9c22114ae40cd40fd55012063cd684a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -52,6 +52,13 @@
             "markers": "sys_platform == 'win32'",
             "version": "==0.4.1"
         },
+        "curlify": {
+            "hashes": [
+                "sha256:b383fa64ff632358b660bb72db03ad905fc91973bd6936373eaa81d8730f7645"
+            ],
+            "index": "pypi",
+            "version": "==2.1.1"
+        },
         "idna": {
             "hashes": [
                 "sha256:c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407",
@@ -69,10 +76,10 @@
         },
         "pluggy": {
             "hashes": [
-                "sha256:8ddc32f03971bfdf900a81961a48ccf2fb677cf7715108f85295c67405798616",
-                "sha256:980710797ff6a041e9a73a5787804f848996ecaa6f8a1b1e08224a5894f2074a"
+                "sha256:19ecf9ce9db2fce065a7a0586e07cfb4ac8614fe96edf628a264b1c70116cf8f",
+                "sha256:84d306a647cc805219916e62aab89caa97a33a1dd8c342e87a37f91073cd4746"
             ],
-            "version": "==0.8.1"
+            "version": "==0.9.0"
         },
         "py": {
             "hashes": [
