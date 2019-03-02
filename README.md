@@ -12,14 +12,3 @@ $ pytest --html=testresults.html
 
 Tested these steps on my local windows and AWS EC2 Linux instance:<br>
 platform linux -- Python 3.7.1, pytest-4.3.0, py-1.8.0, pluggy-0.9.0
-
-
-Important Info regarding tests and assertions:
-
-Petstore Swagger documentation is not very accurate. <br>
-Some calls with invalid data returns '200' instead of any error codes (400, 404, 405 etc). <br>
-I mentioned these in the code while doing assertions. 
-
-I also skipped implementation of some tests since they take time and this is a sample project.
-<br>
-I marked those tests as 'pass'
