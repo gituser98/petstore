@@ -14,15 +14,13 @@ def test_add_new_valid_pet():
     logger.info('Posting pet: {0}'.format(generated_pet))
     response = api_methods.post_pet(generated_pet)
 
-    assert response.status_code == constants.HTTP_OK, "HTTP Status is not correct!"
-    assert response.json() == generated_pet, "Response body doesn't match the expected object!"
-    assert generated_pet == response.json()
+    test_utils.verify_pet_from_api(generated_pet, response)
 
     # Add database check to verify pet is created
 
     api_response = api_methods.get_pet_by_id(generated_pet['id'])
-    assert generated_pet == api_response.json()
-    assert api_response.status_code == constants.HTTP_OK
+
+    test_utils.verify_pet_from_api(generated_pet, api_response)
 
 
 @pytest.mark.postpet
@@ -45,8 +43,7 @@ def test_add_new_valid_pet_negative_id():
     logger.info('Posting pet: {0}'.format(generated_pet))
     response = api_methods.post_pet(generated_pet)
 
-    assert response.status_code == constants.HTTP_OK, "HTTP Status is not correct!"
-    assert response.json() == generated_pet, "Response body doesn't match the expected object!"
+    test_utils.verify_pet_from_api(generated_pet, response)
 
 
 @pytest.mark.postpet

@@ -1,6 +1,7 @@
 import random
 import string
 import logging
+from utils import constants
 
 logger = logging.getLogger(__name__)
 logger.setLevel(level=logging.WARNING)
@@ -45,3 +46,8 @@ def compare_dicts_ignore_keys(dict1, dict2, ignore_keys):
     keys_dict1 = set(dict1).difference(ignore_keys)
     keys_dict2 = set(dict2).difference(ignore_keys)
     return keys_dict1 == keys_dict2 and all(dict1[k] == dict2[k] for k in keys_dict1)
+
+
+def verify_pet_from_api(expected_pet, api_response):
+    assert api_response.status_code == constants.HTTP_OK, "HTTP Status is not correct!"
+    assert api_response.json() == expected_pet, "Response body doesn't match the expected object!"

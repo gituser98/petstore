@@ -16,14 +16,12 @@ def test_update_pet():
     logger.info('POST pet: {0}'.format(generated_pet))
     response = api_methods.post_pet(generated_pet)
 
-    assert response.status_code == constants.HTTP_OK, "HTTP Status is not correct!"
-    assert response.json() == generated_pet, "Response body doesn't match the expected object!"
+    test_utils.verify_pet_from_api(generated_pet, response)
 
     # Add database check to verify pet is created
 
     api_response = api_methods.get_pet_by_id(pet_id)
-    assert api_response.status_code == constants.HTTP_OK
-    assert generated_pet == api_response.json()
+    test_utils.verify_pet_from_api(generated_pet, api_response)
 
     # Update pet with form
     api_methods.post_pet_by_id(pet_id, "new_name", "new_status")
@@ -36,8 +34,7 @@ def test_update_pet():
     updated_expected_object['name'] = "new_name"
     updated_expected_object['status'] = "new_status"
 
-    assert updated_api_response.status_code == constants.HTTP_OK
-    assert updated_expected_object == updated_api_response.json()
+    test_utils.verify_pet_from_api(updated_expected_object, updated_api_response)
 
 
 @pytest.mark.updatepetwithid

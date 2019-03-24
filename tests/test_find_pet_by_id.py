@@ -16,8 +16,7 @@ def test_get_by_id():
     api_methods.post_pet(generated_pet)
     response = api_methods.get_pet_by_id(generated_pet['id'])
 
-    assert response.status_code == constants.HTTP_OK
-    assert generated_pet == response.json()
+    test_utils.verify_pet_from_api(generated_pet, response)
 
 
 @pytest.mark.findpetbyid
